@@ -16,14 +16,14 @@ public class CustomerService {
     public List<Customer> getAll(){
         return customerRepository.getAll();
     }
-    public Optional<Customer> getCustomer(int id){
+    public Optional<Customer> getCustomer(String id){
         return customerRepository.getCustomer(id);
     }
 
     public Customer save(Customer customer){
         return customerRepository.save(customer);
     }
-    public boolean delete(int id){
+    public boolean delete(String id){
         return customerRepository.getCustomer(id)
                 .map(customer -> {
                     customerRepository.delete(id);

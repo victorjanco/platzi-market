@@ -24,7 +24,7 @@ public class ClienteRepository implements CustomerRepository {
     }
 
     @Override
-    public Optional<Customer> getCustomer(int id) {
+    public Optional<Customer> getCustomer(String id) {
         Optional<Cliente> optionalCliente = clienteCrudRepository.findById(id);
         return optionalCliente.map(cliente -> customerMapper.toCustomer(cliente));
     }
@@ -36,7 +36,7 @@ public class ClienteRepository implements CustomerRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
         clienteCrudRepository.deleteById(id);
     }
 }

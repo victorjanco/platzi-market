@@ -1,18 +1,18 @@
 package com.platzi.market.domain;
 
 public class Customer {
-    private Integer id;
+    private String id;
     private String name;
     private String lastName;
     private Double phone;
     private String address;
     private String email;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface CustomerRepository {
     List<Customer> getAll();
-    Optional<Customer> getCustomer(int id);
+    Optional<Customer> getCustomer(String id);
     Customer save(Customer customer);
-    void delete(int id);
+    void delete(String id);
 }
