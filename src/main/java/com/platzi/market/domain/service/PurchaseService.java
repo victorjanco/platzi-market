@@ -15,4 +15,7 @@ public class PurchaseService {
         return purchaseRepository.getAll();
     }
 
+    public Purchase save(Purchase purchase) {
+        return purchaseRepository.save(purchase);
+    }
 }

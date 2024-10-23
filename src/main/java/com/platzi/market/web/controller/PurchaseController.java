@@ -20,4 +20,11 @@ public class PurchaseController {
     public ResponseEntity<List<Purchase>> getAll(){
         return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
     }
+
+    // Método para guardar una nueva compra
+    @PostMapping("/save")
+    public ResponseEntity<Purchase> save(@RequestBody Purchase purchase){
+        Purchase savedPurchase = purchaseService.save(purchase);
+        return new ResponseEntity<>(savedPurchase, HttpStatus.CREATED);
+    }
 }
